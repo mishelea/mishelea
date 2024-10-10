@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIZ 2° ANIVERSARIO</title>
+    <link rel="stylesheet" href="FM.css">
+</head>
+<body>
+    
+    <header id="encabezado">
+        <h1>08/08/2024 ______ FELIZ ANIVERSARIO - 2° mes juntos ______ 08/10/2024</h1>
+    </header>
+
+    <main>
+        <div class="col">
+            <h2><center>Fotos</center></h2>
+            <div class="galeria">
+                <img src="1.jpeg" alt="1" />
+                <img src="2.jpeg" alt="2" />
+                <img src="3.jpeg" alt="3" />
+                <img src="4.jpeg" alt="4" />
+                <img src="5.jpeg" alt="5" />
+            </div>
+        </div>
+
+        <div class="col">
+            <h2><center>Esto es para ti AMOR</center></h2>
+            <textarea id="carta" readonly>
+Mishel Sabrina Endara Aranzaes
+
+¡Feliz aniversario, mi amor! Dos meses ya han pasado desde que comenzamos nuestra relación, y siento que ha sido el mejor tiempo de mi vida. Me siento tan afortunado de tener a alguien como tú a mi lado, alguien que me apoya, me entiende y me ama incondicionalmente.
+
+Recuerdo todos los momentos que hemos compartido juntos en estos dos meses a tu lado. Cada uno de ellos ha sido especial y ha dejado una marca en mi corazón. No puedo imaginar mi vida sin ti, porque eres la persona que me hace feliz todos los días.
+
+Quiero agradecerte por todo lo que has hecho por mí. Gracias por escucharme cuando necesito hablar, por animarme cuando estoy abatido y por hacerme reír cuando necesito alegría en mi vida. No hay nada que no haría por ti, porque eres mi todo.
+
+En este día especial, Te prometo amarte, cuidarte y respetarte siempre. Espero que podamos seguir construyendo juntos una vida llena de amor Y felicidad.
+
+Feliz aniversario, mi amor. Te amo con todo mi corazón.
+
+Con todo mi amor.
+F.F.L.
+            </textarea>
+        </div>
+
+        <div class="col">
+            <h2><center>videos</center></h2>
+            <div class="video-container">
+                <video src="V6.mp4" controls></video>
+                <video src="V3.mp4" controls></video>
+                <audio id="fondo-audio1" src="M12.mp3" autoplay loop controls></audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 - Todos los derechos reservados - Tu amor</p>
+    </footer>
+
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+
+    <script>
+        const encabezado = document.getElementById("encabezado");
+
+        encabezado.addEventListener("click", () => {
+            const colores = ["#ff69b4", "#00bfff", "#ffa500", "#00ff7f", "#8a2be2"];
+            const indice = Math.floor(Math.random() * colores.length);
+            encabezado.style.backgroundColor = colores[indice];
+        });
+    </script>
+    <script>
+        const galeria = document.querySelector('.galeria');
+        const imagenes = galeria.querySelectorAll('img');
+        let index = 0;
+    
+        function mostrarImagen(index) {
+            imagenes.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+        }
+    
+        function cambiarImagen() {
+            index = (index + 1) % imagenes.length;
+            mostrarImagen(index);
+        }
+    
+        mostrarImagen(index); // Muestra la primera imagen
+        setInterval(cambiarImagen, 5000); // Cambia la imagen cada 5 segundos
+    </script>
+    
+</body>
+</html>
+
+
